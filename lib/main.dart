@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quick_read/features/authentication/view/authentication_screen.dart';
+import 'package:iread/features/authentication/view/authentication_screen.dart';
 
 void main() {
   runApp(const IReadApp());

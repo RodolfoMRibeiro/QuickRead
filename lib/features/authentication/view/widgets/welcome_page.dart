@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quick_read/core/res/image_res.dart';
+import 'package:iread/core/res/image_res.dart';
+import 'package:iread/common/custom_transitions/slide_up_transition.dart';
+import 'package:iread/features/authentication/view/widgets/login_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -51,20 +53,26 @@ class WelcomePage extends StatelessWidget {
                           20), // Add some spacing between the texts and the button
                   ElevatedButton(
                     onPressed: () {
-                      // Add your button action here
+                      // Navigate to the second page with custom transition
+                      Navigator.push(
+                        context,
+                        SlideUpPageRoute(
+                          builder: (context) => LoginPage(),
+                        ),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor:
                           Colors.blue, // Set the button's background color
                     ),
                     child: const Text(
-                      "Dive In",
+                      "Blue Button",
                       style: TextStyle(
                         fontSize: 18, // Adjust the font size as needed
                         color: Colors.white, // Set the text color
                       ),
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
