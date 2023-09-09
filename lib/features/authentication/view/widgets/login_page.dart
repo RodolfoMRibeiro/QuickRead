@@ -29,13 +29,9 @@ class LoginPage extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              onPressed: () {
-                // Add your login logic here
-                // Typically, you would validate user credentials and navigate to the next screen if successful.
-              },
+              onPressed: () {},
               style: ElevatedButton.styleFrom(
-                backgroundColor:
-                    Colors.blue, // Set the button's background color
+                backgroundColor: Colors.blue,
               ),
               child: const Text(
                 "Login",
