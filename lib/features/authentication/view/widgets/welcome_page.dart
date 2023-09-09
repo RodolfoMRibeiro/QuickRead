@@ -28,11 +28,12 @@ class WelcomePage extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
                     "Your Entire Library in One Place",
                     style: TextStyle(
-                      fontSize: 24, // Adjust the font size as needed
+                      fontSize: 27, // Adjust the font size as needed
                       color: Colors.white, // Set the text color
                       fontWeight:
                           FontWeight.bold, // Adjust the font weight as needed
@@ -40,24 +41,25 @@ class WelcomePage extends StatelessWidget {
                     textAlign: TextAlign.center, // Center the text horizontally
                   ),
                   const SizedBox(
-                      height: 10), // Add some spacing between the texts
+                    height: 10,
+                  ), // Add some spacing between the texts
                   const Text(
                     "Read, Learn, Grow",
                     style: TextStyle(
-                      fontSize: 16, // Adjust the font size as needed
+                      fontSize: 19, // Adjust the font size as needed
                       color: Colors.white, // Set the text color
                     ),
                   ),
                   const SizedBox(
-                      height:
-                          20), // Add some spacing between the texts and the button
+                    height: 20,
+                  ), // Add some spacing between the texts and the button
                   ElevatedButton(
                     onPressed: () {
                       // Navigate to the second page with custom transition
                       Navigator.push(
                         context,
                         SlideUpPageRoute(
-                          builder: (context) => LoginPage(),
+                          builder: (context) => const LoginPage(),
                         ),
                       );
                     },
@@ -66,12 +68,15 @@ class WelcomePage extends StatelessWidget {
                           Colors.blue, // Set the button's background color
                     ),
                     child: const Text(
-                      "Blue Button",
+                      "Get Started",
                       style: TextStyle(
                         fontSize: 18, // Adjust the font size as needed
                         color: Colors.white, // Set the text color
                       ),
                     ),
+                  ),
+                  const SizedBox(
+                    height: 10,
                   )
                 ],
               ),
