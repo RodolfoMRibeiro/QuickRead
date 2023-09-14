@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iread/common/custom_transitions/slide_up_transition.dart';
+import 'package:iread/features/reading/view/reading_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -29,7 +31,14 @@ class LoginPage extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  SlideUpPageRoute(
+                    builder: (context) => const ReadingPage(),
+                  ),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
               ),
